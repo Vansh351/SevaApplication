@@ -1,7 +1,6 @@
 const instance = require("../razorPay/razorPay");
 const { success } = require("./payment");
-const db = require("../models");
-const config = require("../config");
+const db = require("../models");;
 const crypto= require("crypto");
 const { Donation } = require("../models");
 const { Campaign} = require("../models")
