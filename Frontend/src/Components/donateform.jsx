@@ -18,13 +18,14 @@ const DonateForm = (props) => {
   
 
   const send_to = config.donateTo(props.id);
+   const key_url = config.getkey();
    const[val,setVal]= useState();
    const history =useHistory();
 
    //console.log(props);
    const Paymenthandler=async()=>{
      
-    const {data:{key}}= await axios.get("http://localhost:4000/api/getkey");
+    const {data:{key}}= await axios.get(key_url);
     const {data:{order}}= await axios.post(send_to,{
       amount:props.amount
     })
