@@ -1,6 +1,10 @@
 //const backendURL = "https://crowd-funding-backend.vercel.app/";
  const backendURL = process.env.REACT_APP_BASE_URL";
 
+export const getKey = () => {
+  return backendURL + "/api/getkey";
+};
+
 export const getAllCampaignsUrl = () => {
   return backendURL + "api/campaign/all";
 };
@@ -54,6 +58,7 @@ export const querydeleteUrl = (id) => {
 };
 
 const toExport = {
+ getKey,
   getAllCampaignsUrl,
   getCampaignDataByIdUrl,
   createNewCampaignUrl,
