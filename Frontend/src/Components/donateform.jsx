@@ -25,7 +25,7 @@ const DonateForm = (props) => {
    //console.log(props);
    const Paymenthandler=async()=>{
      
-    const {data:{key}}= await axios.get(key_url);
+    const {data:{key}}= await axios.get("https://sevaapp.onrender.com/api/getkey");
     const {data:{order}}= await axios.post(send_to,{
       amount:props.amount
     })
